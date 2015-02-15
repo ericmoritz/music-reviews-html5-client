@@ -1,0 +1,1554 @@
+{
+  "@context": {
+    "Collection": "hydra:Collection", 
+    "MusicAlbum": "schema:MusicAlbum", 
+    "MusicGroup": "schema:MusicGroup", 
+    "Person": "schema:Person", 
+    "Rating": "schema:Rating", 
+    "Review": "schema:Review", 
+    "ReviewList": "vocab:ReviewList", 
+    "User": "vocab:User", 
+    "User/Queue": "vocab:User/Queue", 
+    "User/Queue/Item": "vocab:User/Queue/Item", 
+    "User/Seen": "vocab:User/Seen", 
+    "User/Seen/Item": "vocab:User/Seen/Item", 
+    "about": "schema:about", 
+    "author": "schema:author", 
+    "bestRating": "schema:bestRating", 
+    "datePublished": {
+      "@id": "schema:datePublished", 
+      "@type": "xsd:date"
+    }, 
+    "hydra": "http://www.w3.org/ns/hydra/core#", 
+    "loginForm": "vocab:loginForm", 
+    "member": "hydra:member", 
+    "name": "schema:name", 
+    "queue": {
+      "@id": "vocab:queue", 
+      "@type": "@id"
+    }, 
+    "ratingValue": "schema:ratingValue", 
+    "reviewRating": "schema:reviewRating", 
+    "review_id": "vocab:review_id", 
+    "schema": "http://schema.org/", 
+    "seen": {
+      "@id": "vocab:seen", 
+      "@type": "@id"
+    }, 
+    "url": "schema:url", 
+    "user": "vocab:user", 
+    "vocab": "http://localhost:5000/vocab#", 
+    "worstRating": "schema:worstRating", 
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  }, 
+  "@id": "/mock_service/queue.json", 
+  "@type": [
+    "Collection", 
+    "ReviewList", 
+    "User/Queue"
+  ], 
+  "member": [
+    {
+      "@type": [
+        "Review", 
+        "User/Queue/Item"
+      ], 
+      "about": {
+        "@type": [
+          "MusicAlbum"
+        ], 
+        "byArtist": {
+          "@type": [
+            "MusicGroup"
+          ], 
+          "name": "James Blackshaw"
+        }, 
+        "name": "Summoning Suns"
+      }, 
+      "author": {
+        "@type": [
+          "Person"
+        ], 
+        "name": "Grayson Haver Currin", 
+        "url": "http://pitchfork.com/staff/grayson-currin/"
+      }, 
+      "datePublished": "2015-02-02", 
+      "reviewRating": {
+        "@type": [
+          "Rating"
+        ], 
+        "bestRating": 100, 
+        "ratingValue": 79.0, 
+        "worstRating": 0
+      }, 
+      "review_id": "aHR0cDovL3BpdGNoZm9yay5jb20vcmV2aWV3cy9hbGJ1bXMvMjAwOTMtc3VtbW9uaW5nLXN1bnMv", 
+      "url": "http://pitchfork.com/reviews/albums/20093-summoning-suns/"
+    }, 
+    {
+      "@type": [
+        "Review", 
+        "User/Queue/Item"
+      ], 
+      "about": {
+        "@type": [
+          "MusicAlbum"
+        ], 
+        "byArtist": {
+          "@type": [
+            "MusicGroup"
+          ], 
+          "name": "Lino Capra Vaccina"
+        }, 
+        "name": "Antico Adagio"
+      }, 
+      "author": {
+        "@type": [
+          "Person"
+        ], 
+        "name": "Andy Beta", 
+        "url": "http://pitchfork.com/staff/andy-beta/"
+      }, 
+      "datePublished": "2015-01-27", 
+      "reviewRating": {
+        "@type": [
+          "Rating"
+        ], 
+        "bestRating": 100, 
+        "ratingValue": 79.0, 
+        "worstRating": 0
+      }, 
+      "review_id": "aHR0cDovL3BpdGNoZm9yay5jb20vcmV2aWV3cy9hbGJ1bXMvMjAxMTgtYW50aWNvLWFkYWdpby8=", 
+      "url": "http://pitchfork.com/reviews/albums/20118-antico-adagio/"
+    }, 
+    {
+      "@type": [
+        "Review", 
+        "User/Queue/Item"
+      ], 
+      "about": {
+        "@type": [
+          "MusicAlbum"
+        ], 
+        "byArtist": {
+          "@type": [
+            "MusicGroup"
+          ], 
+          "name": "Mr. Mitch"
+        }, 
+        "name": "Parallel Memories"
+      }, 
+      "author": {
+        "@type": [
+          "Person"
+        ], 
+        "name": "Nate Patrin", 
+        "url": "http://pitchfork.com/staff/nate-patrin/"
+      }, 
+      "datePublished": "2014-12-09", 
+      "reviewRating": {
+        "@type": [
+          "Rating"
+        ], 
+        "bestRating": 100, 
+        "ratingValue": 79.0, 
+        "worstRating": 0
+      }, 
+      "review_id": "aHR0cDovL3BpdGNoZm9yay5jb20vcmV2aWV3cy9hbGJ1bXMvMjAwMDEtcGFyYWxsZWwtbWVtb3JpZXMv", 
+      "url": "http://pitchfork.com/reviews/albums/20001-parallel-memories/"
+    }, 
+    {
+      "@type": [
+        "Review", 
+        "User/Queue/Item"
+      ], 
+      "about": {
+        "@type": [
+          "MusicAlbum"
+        ], 
+        "byArtist": {
+          "@type": [
+            "MusicGroup"
+          ], 
+          "name": "Napalm Death"
+        }, 
+        "name": "Apex Predator - Easy Meat"
+      }, 
+      "author": {
+        "@type": [
+          "Person"
+        ], 
+        "name": "Zoe Camp", 
+        "url": "http://pitchfork.com/staff/zoe-camp/"
+      }, 
+      "datePublished": "2015-01-28", 
+      "reviewRating": {
+        "@type": [
+          "Rating"
+        ], 
+        "bestRating": 100, 
+        "ratingValue": 79.0, 
+        "worstRating": 0
+      }, 
+      "review_id": "aHR0cDovL3BpdGNoZm9yay5jb20vcmV2aWV3cy9hbGJ1bXMvMjAxMTYtYXBleC1wcmVkYXRvci1lYXN5LW1lYXQv", 
+      "url": "http://pitchfork.com/reviews/albums/20116-apex-predator-easy-meat/"
+    }, 
+    {
+      "@type": [
+        "Review", 
+        "User/Queue/Item"
+      ], 
+      "about": {
+        "@type": [
+          "MusicAlbum"
+        ], 
+        "byArtist": {
+          "@type": [
+            "MusicGroup"
+          ], 
+          "name": "Primordial"
+        }, 
+        "name": "Where Greater Men Have Fallen"
+      }, 
+      "author": {
+        "@type": [
+          "Person"
+        ], 
+        "name": "Grayson Haver Currin", 
+        "url": "http://pitchfork.com/staff/grayson-currin/"
+      }, 
+      "datePublished": "2014-12-09", 
+      "reviewRating": {
+        "@type": [
+          "Rating"
+        ], 
+        "bestRating": 100, 
+        "ratingValue": 79.0, 
+        "worstRating": 0
+      }, 
+      "review_id": "aHR0cDovL3BpdGNoZm9yay5jb20vcmV2aWV3cy9hbGJ1bXMvMTk5MDgtd2hlcmUtZ3JlYXRlci1tZW4taGF2ZS1mYWxsZW4v", 
+      "url": "http://pitchfork.com/reviews/albums/19908-where-greater-men-have-fallen/"
+    }, 
+    {
+      "@type": [
+        "Review", 
+        "User/Queue/Item"
+      ], 
+      "about": {
+        "@type": [
+          "MusicAlbum"
+        ], 
+        "byArtist": {
+          "@type": [
+            "MusicGroup"
+          ], 
+          "name": "Anthony Naples"
+        }, 
+        "name": "Body Pill"
+      }, 
+      "author": {
+        "@type": [
+          "Person"
+        ], 
+        "name": "Philip Sherburne", 
+        "url": "http://pitchfork.com/staff/philip-sherburne/"
+      }, 
+      "datePublished": "2015-02-13", 
+      "reviewRating": {
+        "@type": [
+          "Rating"
+        ], 
+        "bestRating": 100, 
+        "ratingValue": 78.0, 
+        "worstRating": 0
+      }, 
+      "review_id": "aHR0cDovL3BpdGNoZm9yay5jb20vcmV2aWV3cy9hbGJ1bXMvMjAwNzUtYm9keS1waWxsLw==", 
+      "url": "http://pitchfork.com/reviews/albums/20075-body-pill/"
+    }, 
+    {
+      "@type": [
+        "Review", 
+        "User/Queue/Item"
+      ], 
+      "about": {
+        "@type": [
+          "MusicAlbum"
+        ], 
+        "byArtist": {
+          "@type": [
+            "MusicGroup"
+          ], 
+          "name": "Gaussian Curve"
+        }, 
+        "name": "Clouds"
+      }, 
+      "author": {
+        "@type": [
+          "Person"
+        ], 
+        "name": "Philip Sherburne", 
+        "url": "http://pitchfork.com/staff/philip-sherburne/"
+      }, 
+      "datePublished": "2015-01-14", 
+      "reviewRating": {
+        "@type": [
+          "Rating"
+        ], 
+        "bestRating": 100, 
+        "ratingValue": 78.0, 
+        "worstRating": 0
+      }, 
+      "review_id": "aHR0cDovL3BpdGNoZm9yay5jb20vcmV2aWV3cy9hbGJ1bXMvMjAwNjQtY2xvdWRzLw==", 
+      "url": "http://pitchfork.com/reviews/albums/20064-clouds/"
+    }, 
+    {
+      "@type": [
+        "Review", 
+        "User/Queue/Item"
+      ], 
+      "about": {
+        "@type": [
+          "MusicAlbum"
+        ], 
+        "byArtist": {
+          "@type": [
+            "MusicGroup"
+          ], 
+          "name": "Jan St. Werner"
+        }, 
+        "name": "Miscontinuum Album"
+      }, 
+      "author": {
+        "@type": [
+          "Person"
+        ], 
+        "name": "Philip Sherburne", 
+        "url": "http://pitchfork.com/staff/philip-sherburne/"
+      }, 
+      "datePublished": "2015-01-28", 
+      "reviewRating": {
+        "@type": [
+          "Rating"
+        ], 
+        "bestRating": 100, 
+        "ratingValue": 78.0, 
+        "worstRating": 0
+      }, 
+      "review_id": "aHR0cDovL3BpdGNoZm9yay5jb20vcmV2aWV3cy9hbGJ1bXMvMjAwNzEtbWlzY29udGludXVtLWFsYnVtLw==", 
+      "url": "http://pitchfork.com/reviews/albums/20071-miscontinuum-album/"
+    }, 
+    {
+      "@type": [
+        "Review", 
+        "User/Queue/Item"
+      ], 
+      "about": {
+        "@type": [
+          "MusicAlbum"
+        ], 
+        "byArtist": {
+          "@type": [
+            "MusicGroup"
+          ], 
+          "name": "Jeff Bridges"
+        }, 
+        "name": "Sleeping Tapes"
+      }, 
+      "author": {
+        "@type": [
+          "Person"
+        ], 
+        "name": "Philip Sherburne", 
+        "url": "http://pitchfork.com/staff/philip-sherburne/"
+      }, 
+      "datePublished": "2015-02-06", 
+      "reviewRating": {
+        "@type": [
+          "Rating"
+        ], 
+        "bestRating": 100, 
+        "ratingValue": 78.0, 
+        "worstRating": 0
+      }, 
+      "review_id": "aHR0cDovL3BpdGNoZm9yay5jb20vcmV2aWV3cy9hbGJ1bXMvMjAyNDUtc2xlZXBpbmctdGFwZXMv", 
+      "url": "http://pitchfork.com/reviews/albums/20245-sleeping-tapes/"
+    }, 
+    {
+      "@type": [
+        "Review", 
+        "User/Queue/Item"
+      ], 
+      "about": {
+        "@type": [
+          "MusicAlbum"
+        ], 
+        "byArtist": {
+          "@type": [
+            "MusicGroup"
+          ], 
+          "name": "Obnox"
+        }, 
+        "name": "Boogalou Reed"
+      }, 
+      "author": {
+        "@type": [
+          "Person"
+        ], 
+        "name": "Marc Masters", 
+        "url": "http://pitchfork.com/staff/marc-masters/"
+      }, 
+      "datePublished": "2015-02-03", 
+      "reviewRating": {
+        "@type": [
+          "Rating"
+        ], 
+        "bestRating": 100, 
+        "ratingValue": 78.0, 
+        "worstRating": 0
+      }, 
+      "review_id": "aHR0cDovL3BpdGNoZm9yay5jb20vcmV2aWV3cy9hbGJ1bXMvMjAxNjgtYm9vZ2Fsb3UtcmVlZC8=", 
+      "url": "http://pitchfork.com/reviews/albums/20168-boogalou-reed/"
+    }, 
+    {
+      "@type": [
+        "Review", 
+        "User/Queue/Item"
+      ], 
+      "about": {
+        "@type": [
+          "MusicAlbum"
+        ], 
+        "byArtist": {
+          "@type": [
+            "MusicGroup"
+          ], 
+          "name": "Rae Sremmurd"
+        }, 
+        "name": "SremmLife"
+      }, 
+      "author": {
+        "@type": [
+          "Person"
+        ], 
+        "name": "Corban Goble", 
+        "url": "http://pitchfork.com/staff/corban-goble/"
+      }, 
+      "datePublished": "2015-01-16", 
+      "reviewRating": {
+        "@type": [
+          "Rating"
+        ], 
+        "bestRating": 100, 
+        "ratingValue": 78.0, 
+        "worstRating": 0
+      }, 
+      "review_id": "aHR0cDovL3BpdGNoZm9yay5jb20vcmV2aWV3cy9hbGJ1bXMvMjAxMTMtc3JlbW1saWZlLw==", 
+      "url": "http://pitchfork.com/reviews/albums/20113-sremmlife/"
+    }, 
+    {
+      "@type": [
+        "Review", 
+        "User/Queue/Item"
+      ], 
+      "about": {
+        "@type": [
+          "MusicAlbum"
+        ], 
+        "byArtist": {
+          "@type": [
+            "MusicGroup"
+          ], 
+          "name": "Steffi"
+        }, 
+        "name": "Power of Anonymity"
+      }, 
+      "author": {
+        "@type": [
+          "Person"
+        ], 
+        "name": "Philip Sherburne", 
+        "url": "http://pitchfork.com/staff/philip-sherburne/"
+      }, 
+      "datePublished": "2014-12-05", 
+      "reviewRating": {
+        "@type": [
+          "Rating"
+        ], 
+        "bestRating": 100, 
+        "ratingValue": 78.0, 
+        "worstRating": 0
+      }, 
+      "review_id": "aHR0cDovL3BpdGNoZm9yay5jb20vcmV2aWV3cy9hbGJ1bXMvMTk4Mzktc3RlZmZpLXBvd2VyLW9mLWFub255bWl0eS8=", 
+      "url": "http://pitchfork.com/reviews/albums/19839-steffi-power-of-anonymity/"
+    }, 
+    {
+      "@type": [
+        "Review", 
+        "User/Queue/Item"
+      ], 
+      "about": {
+        "@type": [
+          "MusicAlbum"
+        ], 
+        "byArtist": {
+          "@type": [
+            "MusicGroup"
+          ], 
+          "name": "Supersilent"
+        }, 
+        "name": "12"
+      }, 
+      "author": {
+        "@type": [
+          "Person"
+        ], 
+        "name": "Joe Tangari", 
+        "url": "http://pitchfork.com/staff/joe-tangari/"
+      }, 
+      "datePublished": "2014-12-08", 
+      "reviewRating": {
+        "@type": [
+          "Rating"
+        ], 
+        "bestRating": 100, 
+        "ratingValue": 78.0, 
+        "worstRating": 0
+      }, 
+      "review_id": "aHR0cDovL3BpdGNoZm9yay5jb20vcmV2aWV3cy9hbGJ1bXMvMjAwMzctc3VwZXJzaWxlbnQtMTIv", 
+      "url": "http://pitchfork.com/reviews/albums/20037-supersilent-12/"
+    }, 
+    {
+      "@type": [
+        "Review", 
+        "User/Queue/Item"
+      ], 
+      "about": {
+        "@type": [
+          "MusicAlbum"
+        ], 
+        "byArtist": {
+          "@type": [
+            "MusicGroup"
+          ], 
+          "name": "Brian Eno"
+        }, 
+        "name": "Nerve Net"
+      }, 
+      "author": {
+        "@type": [
+          "Person"
+        ], 
+        "name": "Douglas Wolk", 
+        "url": "http://pitchfork.com/staff/douglas-wolk/"
+      }, 
+      "datePublished": "2014-12-05", 
+      "reviewRating": {
+        "@type": [
+          "Rating"
+        ], 
+        "bestRating": 100, 
+        "ratingValue": 77.0, 
+        "worstRating": 0
+      }, 
+      "review_id": "aHR0cDovL3BpdGNoZm9yay5jb20vcmV2aWV3cy9hbGJ1bXMvMjAwMzItYnJpYW4tZW5vLW5lcnZlLW5ldHRoZS1zaHV0b3YtYXNzZW1ibHluZXJvbGl0aGUtZHJvcC8=", 
+      "url": "http://pitchfork.com/reviews/albums/20032-brian-eno-nerve-netthe-shutov-assemblynerolithe-drop/"
+    }, 
+    {
+      "@type": [
+        "Review", 
+        "User/Queue/Item"
+      ], 
+      "about": {
+        "@type": [
+          "MusicAlbum"
+        ], 
+        "byArtist": {
+          "@type": [
+            "MusicGroup"
+          ], 
+          "name": "Cloakroom"
+        }, 
+        "name": "Further Out"
+      }, 
+      "author": {
+        "@type": [
+          "Person"
+        ], 
+        "name": "Ian Cohen", 
+        "url": "http://pitchfork.com/staff/ian-cohen/"
+      }, 
+      "datePublished": "2015-01-21", 
+      "reviewRating": {
+        "@type": [
+          "Rating"
+        ], 
+        "bestRating": 100, 
+        "ratingValue": 77.0, 
+        "worstRating": 0
+      }, 
+      "review_id": "aHR0cDovL3BpdGNoZm9yay5jb20vcmV2aWV3cy9hbGJ1bXMvMjAxMzgtZnVydGhlci1vdXQv", 
+      "url": "http://pitchfork.com/reviews/albums/20138-further-out/"
+    }, 
+    {
+      "@type": [
+        "Review", 
+        "User/Queue/Item"
+      ], 
+      "about": {
+        "@type": [
+          "MusicAlbum"
+        ], 
+        "byArtist": {
+          "@type": [
+            "MusicGroup"
+          ], 
+          "name": "Future"
+        }, 
+        "name": "Beast Mode"
+      }, 
+      "author": {
+        "@type": [
+          "Person"
+        ], 
+        "name": "Craig Jenkins", 
+        "url": "http://pitchfork.com/staff/craig-jenkins/"
+      }, 
+      "datePublished": "2015-01-29", 
+      "reviewRating": {
+        "@type": [
+          "Rating"
+        ], 
+        "bestRating": 100, 
+        "ratingValue": 77.0, 
+        "worstRating": 0
+      }, 
+      "review_id": "aHR0cDovL3BpdGNoZm9yay5jb20vcmV2aWV3cy9hbGJ1bXMvMjAxNjYtZnV0dXJlLWJlYXN0LW1vZGUv", 
+      "url": "http://pitchfork.com/reviews/albums/20166-future-beast-mode/"
+    }, 
+    {
+      "@type": [
+        "Review", 
+        "User/Queue/Item"
+      ], 
+      "about": {
+        "@type": [
+          "MusicAlbum"
+        ], 
+        "byArtist": {
+          "@type": [
+            "MusicGroup"
+          ], 
+          "name": "Various Artists"
+        }, 
+        "name": "When I Reach That Heavenly Shore: Unearthly Black Gospel, 1926-1936"
+      }, 
+      "author": {
+        "@type": [
+          "Person"
+        ], 
+        "name": "Stephen M. Deusner", 
+        "url": "http://pitchfork.com/staff/stephen-m-deusner/"
+      }, 
+      "datePublished": "2014-12-09", 
+      "reviewRating": {
+        "@type": [
+          "Rating"
+        ], 
+        "bestRating": 100, 
+        "ratingValue": 77.0, 
+        "worstRating": 0
+      }, 
+      "review_id": "aHR0cDovL3BpdGNoZm9yay5jb20vcmV2aWV3cy9hbGJ1bXMvMTk5NzYtd2hlbi1pLXJlYWNoLXRoYXQtaGVhdmVubHktc2hvcmUtdW5lYXJ0aGx5LWJsYWNrLWdvc3BlbC0xOTI2LTE5MzYv", 
+      "url": "http://pitchfork.com/reviews/albums/19976-when-i-reach-that-heavenly-shore-unearthly-black-gospel-1926-1936/"
+    }, 
+    {
+      "@type": [
+        "Review", 
+        "User/Queue/Item"
+      ], 
+      "about": {
+        "@type": [
+          "MusicAlbum"
+        ], 
+        "byArtist": {
+          "@type": [
+            "MusicGroup"
+          ], 
+          "name": "Vic Spencer"
+        }, 
+        "name": "The Cost of Victory"
+      }, 
+      "author": {
+        "@type": [
+          "Person"
+        ], 
+        "name": "Winston Cook-Wilson", 
+        "url": "http://pitchfork.com/staff/winston-cook-wilson/"
+      }, 
+      "datePublished": "2015-01-30", 
+      "reviewRating": {
+        "@type": [
+          "Rating"
+        ], 
+        "bestRating": 100, 
+        "ratingValue": 77.0, 
+        "worstRating": 0
+      }, 
+      "review_id": "aHR0cDovL3BpdGNoZm9yay5jb20vcmV2aWV3cy9hbGJ1bXMvMjAyMDctdGhlLWNvc3Qtb2YtdmljdG9yeS8=", 
+      "url": "http://pitchfork.com/reviews/albums/20207-the-cost-of-victory/"
+    }, 
+    {
+      "@type": [
+        "Review", 
+        "User/Queue/Item"
+      ], 
+      "about": {
+        "@type": [
+          "MusicAlbum"
+        ], 
+        "byArtist": {
+          "@type": [
+            "MusicGroup"
+          ], 
+          "name": "Breakfast in Fur"
+        }, 
+        "name": "Flyaway Garden"
+      }, 
+      "author": {
+        "@type": [
+          "Person"
+        ], 
+        "name": "Stuart Berman", 
+        "url": "http://pitchfork.com/staff/stuart-berman/"
+      }, 
+      "datePublished": "2015-02-04", 
+      "reviewRating": {
+        "@type": [
+          "Rating"
+        ], 
+        "bestRating": 100, 
+        "ratingValue": 76.0, 
+        "worstRating": 0
+      }, 
+      "review_id": "aHR0cDovL3BpdGNoZm9yay5jb20vcmV2aWV3cy9hbGJ1bXMvMjAxNDQtZmx5YXdheS1nYXJkZW4v", 
+      "url": "http://pitchfork.com/reviews/albums/20144-flyaway-garden/"
+    }, 
+    {
+      "@type": [
+        "Review", 
+        "User/Queue/Item"
+      ], 
+      "about": {
+        "@type": [
+          "MusicAlbum"
+        ], 
+        "byArtist": {
+          "@type": [
+            "MusicGroup"
+          ], 
+          "name": "Charli XCX"
+        }, 
+        "name": "Sucker"
+      }, 
+      "author": {
+        "@type": [
+          "Person"
+        ], 
+        "name": "Jamieson Cox", 
+        "url": "http://pitchfork.com/staff/jamieson-cox/"
+      }, 
+      "datePublished": "2014-12-12", 
+      "reviewRating": {
+        "@type": [
+          "Rating"
+        ], 
+        "bestRating": 100, 
+        "ratingValue": 76.0, 
+        "worstRating": 0
+      }, 
+      "review_id": "aHR0cDovL3BpdGNoZm9yay5jb20vcmV2aWV3cy9hbGJ1bXMvMjAwNjYtc3Vja2VyLw==", 
+      "url": "http://pitchfork.com/reviews/albums/20066-sucker/"
+    }, 
+    {
+      "@type": [
+        "Review", 
+        "User/Queue/Item"
+      ], 
+      "about": {
+        "@type": [
+          "MusicAlbum"
+        ], 
+        "byArtist": {
+          "@type": [
+            "MusicGroup"
+          ], 
+          "name": "Elephant Micah"
+        }, 
+        "name": "Where in Our Woods"
+      }, 
+      "author": {
+        "@type": [
+          "Person"
+        ], 
+        "name": "Joel Oliphint", 
+        "url": "http://pitchfork.com/staff/joel-oliphint/"
+      }, 
+      "datePublished": "2015-01-21", 
+      "reviewRating": {
+        "@type": [
+          "Rating"
+        ], 
+        "bestRating": 100, 
+        "ratingValue": 76.0, 
+        "worstRating": 0
+      }, 
+      "review_id": "aHR0cDovL3BpdGNoZm9yay5jb20vcmV2aWV3cy9hbGJ1bXMvMjAwODItd2hlcmUtaW4tb3VyLXdvb2RzLw==", 
+      "url": "http://pitchfork.com/reviews/albums/20082-where-in-our-woods/"
+    }, 
+    {
+      "@type": [
+        "Review", 
+        "User/Queue/Item"
+      ], 
+      "about": {
+        "@type": [
+          "MusicAlbum"
+        ], 
+        "byArtist": {
+          "@type": [
+            "MusicGroup"
+          ], 
+          "name": "Erase Errata"
+        }, 
+        "name": "Lost Weekend"
+      }, 
+      "author": {
+        "@type": [
+          "Person"
+        ], 
+        "name": "Jes Skolnik", 
+        "url": "http://pitchfork.com/staff/jes-skolnik/"
+      }, 
+      "datePublished": "2015-01-21", 
+      "reviewRating": {
+        "@type": [
+          "Rating"
+        ], 
+        "bestRating": 100, 
+        "ratingValue": 76.0, 
+        "worstRating": 0
+      }, 
+      "review_id": "aHR0cDovL3BpdGNoZm9yay5jb20vcmV2aWV3cy9hbGJ1bXMvMjAxMzYtbG9zdC13ZWVrZW5kLw==", 
+      "url": "http://pitchfork.com/reviews/albums/20136-lost-weekend/"
+    }, 
+    {
+      "@type": [
+        "Review", 
+        "User/Queue/Item"
+      ], 
+      "about": {
+        "@type": [
+          "MusicAlbum"
+        ], 
+        "byArtist": {
+          "@type": [
+            "MusicGroup"
+          ], 
+          "name": "Jefre Cantu-Ledesma"
+        }, 
+        "name": "A Year With 13 Moons"
+      }, 
+      "author": {
+        "@type": [
+          "Person"
+        ], 
+        "name": "Philip Sherburne", 
+        "url": "http://pitchfork.com/staff/philip-sherburne/"
+      }, 
+      "datePublished": "2015-02-09", 
+      "reviewRating": {
+        "@type": [
+          "Rating"
+        ], 
+        "bestRating": 100, 
+        "ratingValue": 76.0, 
+        "worstRating": 0
+      }, 
+      "review_id": "aHR0cDovL3BpdGNoZm9yay5jb20vcmV2aWV3cy9hbGJ1bXMvMjAwNzMtYS15ZWFyLXdpdGgtMTMtbW9vbnMv", 
+      "url": "http://pitchfork.com/reviews/albums/20073-a-year-with-13-moons/"
+    }, 
+    {
+      "@type": [
+        "Review", 
+        "User/Queue/Item"
+      ], 
+      "about": {
+        "@type": [
+          "MusicAlbum"
+        ], 
+        "byArtist": {
+          "@type": [
+            "MusicGroup"
+          ], 
+          "name": "John Carpenter"
+        }, 
+        "name": "Lost Themes"
+      }, 
+      "author": {
+        "@type": [
+          "Person"
+        ], 
+        "name": "Aaron Leitko", 
+        "url": "http://pitchfork.com/staff/aaron-leitko/"
+      }, 
+      "datePublished": "2015-02-05", 
+      "reviewRating": {
+        "@type": [
+          "Rating"
+        ], 
+        "bestRating": 100, 
+        "ratingValue": 76.0, 
+        "worstRating": 0
+      }, 
+      "review_id": "aHR0cDovL3BpdGNoZm9yay5jb20vcmV2aWV3cy9hbGJ1bXMvMjAwOTEtam9obi1jYXJwZW50ZXItbG9zdC10aGVtZXMv", 
+      "url": "http://pitchfork.com/reviews/albums/20091-john-carpenter-lost-themes/"
+    }, 
+    {
+      "@type": [
+        "Review", 
+        "User/Queue/Item"
+      ], 
+      "about": {
+        "@type": [
+          "MusicAlbum"
+        ], 
+        "byArtist": {
+          "@type": [
+            "MusicGroup"
+          ], 
+          "name": "Lena Willikens"
+        }, 
+        "name": "Phantom Delia EP"
+      }, 
+      "author": {
+        "@type": [
+          "Person"
+        ], 
+        "name": "Philip Sherburne", 
+        "url": "http://pitchfork.com/staff/philip-sherburne/"
+      }, 
+      "datePublished": "2015-01-23", 
+      "reviewRating": {
+        "@type": [
+          "Rating"
+        ], 
+        "bestRating": 100, 
+        "ratingValue": 76.0, 
+        "worstRating": 0
+      }, 
+      "review_id": "aHR0cDovL3BpdGNoZm9yay5jb20vcmV2aWV3cy9hbGJ1bXMvMjAwNjctcGhhbnRvbS1kZWxpYS1lcC8=", 
+      "url": "http://pitchfork.com/reviews/albums/20067-phantom-delia-ep/"
+    }, 
+    {
+      "@type": [
+        "Review", 
+        "User/Queue/Item"
+      ], 
+      "about": {
+        "@type": [
+          "MusicAlbum"
+        ], 
+        "byArtist": {
+          "@type": [
+            "MusicGroup"
+          ], 
+          "name": "MCFERRDOG"
+        }, 
+        "name": "Lawd Forgive Me"
+      }, 
+      "author": {
+        "@type": [
+          "Person"
+        ], 
+        "name": "Andrew Gaerig", 
+        "url": "http://pitchfork.com/staff/andrew-gaerig/"
+      }, 
+      "datePublished": "2015-01-20", 
+      "reviewRating": {
+        "@type": [
+          "Rating"
+        ], 
+        "bestRating": 100, 
+        "ratingValue": 76.0, 
+        "worstRating": 0
+      }, 
+      "review_id": "aHR0cDovL3BpdGNoZm9yay5jb20vcmV2aWV3cy9hbGJ1bXMvMjAxNTItbGF3ZC1mb3JnaXZlLW1lLw==", 
+      "url": "http://pitchfork.com/reviews/albums/20152-lawd-forgive-me/"
+    }, 
+    {
+      "@type": [
+        "Review", 
+        "User/Queue/Item"
+      ], 
+      "about": {
+        "@type": [
+          "MusicAlbum"
+        ], 
+        "byArtist": {
+          "@type": [
+            "MusicGroup"
+          ], 
+          "name": "Pond"
+        }, 
+        "name": "Man It Feels Like Space Again"
+      }, 
+      "author": {
+        "@type": [
+          "Person"
+        ], 
+        "name": "Jake Cleland", 
+        "url": "http://pitchfork.com/staff/jake-cleland/"
+      }, 
+      "datePublished": "2015-02-11", 
+      "reviewRating": {
+        "@type": [
+          "Rating"
+        ], 
+        "bestRating": 100, 
+        "ratingValue": 76.0, 
+        "worstRating": 0
+      }, 
+      "review_id": "aHR0cDovL3BpdGNoZm9yay5jb20vcmV2aWV3cy9hbGJ1bXMvMjAyMTQtbWFuLWl0LWZlZWxzLWxpa2Utc3BhY2UtYWdhaW4v", 
+      "url": "http://pitchfork.com/reviews/albums/20214-man-it-feels-like-space-again/"
+    }, 
+    {
+      "@type": [
+        "Review", 
+        "User/Queue/Item"
+      ], 
+      "about": {
+        "@type": [
+          "MusicAlbum"
+        ], 
+        "byArtist": {
+          "@type": [
+            "MusicGroup"
+          ], 
+          "name": "Six Organs of Admittance"
+        }, 
+        "name": "Hexadic"
+      }, 
+      "author": {
+        "@type": [
+          "Person"
+        ], 
+        "name": "Marc Masters", 
+        "url": "http://pitchfork.com/staff/marc-masters/"
+      }, 
+      "datePublished": "2015-02-10", 
+      "reviewRating": {
+        "@type": [
+          "Rating"
+        ], 
+        "bestRating": 100, 
+        "ratingValue": 76.0, 
+        "worstRating": 0
+      }, 
+      "review_id": "aHR0cDovL3BpdGNoZm9yay5jb20vcmV2aWV3cy9hbGJ1bXMvMjAwNzQtaGV4YWRpYy8=", 
+      "url": "http://pitchfork.com/reviews/albums/20074-hexadic/"
+    }, 
+    {
+      "@type": [
+        "Review", 
+        "User/Queue/Item"
+      ], 
+      "about": {
+        "@type": [
+          "MusicAlbum"
+        ], 
+        "byArtist": {
+          "@type": [
+            "MusicGroup"
+          ], 
+          "name": "The Body"
+        }, 
+        "name": "You, Whom I Have Always Hated"
+      }, 
+      "author": {
+        "@type": [
+          "Person"
+        ], 
+        "name": "Grayson Haver Currin", 
+        "url": "http://pitchfork.com/staff/grayson-currin/"
+      }, 
+      "datePublished": "2015-01-27", 
+      "reviewRating": {
+        "@type": [
+          "Rating"
+        ], 
+        "bestRating": 100, 
+        "ratingValue": 76.0, 
+        "worstRating": 0
+      }, 
+      "review_id": "aHR0cDovL3BpdGNoZm9yay5jb20vcmV2aWV3cy9hbGJ1bXMvMTk5NzAteW91LXdob20taS1oYXZlLWFsd2F5cy1oYXRlZC8=", 
+      "url": "http://pitchfork.com/reviews/albums/19970-you-whom-i-have-always-hated/"
+    }, 
+    {
+      "@type": [
+        "Review", 
+        "User/Queue/Item"
+      ], 
+      "about": {
+        "@type": [
+          "MusicAlbum"
+        ], 
+        "byArtist": {
+          "@type": [
+            "MusicGroup"
+          ], 
+          "name": "Title Fight"
+        }, 
+        "name": "Hyperview"
+      }, 
+      "author": {
+        "@type": [
+          "Person"
+        ], 
+        "name": "Zoe Camp", 
+        "url": "http://pitchfork.com/staff/zoe-camp/"
+      }, 
+      "datePublished": "2015-02-11", 
+      "reviewRating": {
+        "@type": [
+          "Rating"
+        ], 
+        "bestRating": 100, 
+        "ratingValue": 76.0, 
+        "worstRating": 0
+      }, 
+      "review_id": "aHR0cDovL3BpdGNoZm9yay5jb20vcmV2aWV3cy9hbGJ1bXMvMjAxNzMtaHlwZXJ2aWV3Lw==", 
+      "url": "http://pitchfork.com/reviews/albums/20173-hyperview/"
+    }, 
+    {
+      "@type": [
+        "Review", 
+        "User/Queue/Item"
+      ], 
+      "about": {
+        "@type": [
+          "MusicAlbum"
+        ], 
+        "byArtist": {
+          "@type": [
+            "MusicGroup"
+          ], 
+          "name": "Various Artists"
+        }, 
+        "name": "Back From the Grave Vol. 9"
+      }, 
+      "author": {
+        "@type": [
+          "Person"
+        ], 
+        "name": "Evan Minsker", 
+        "url": "http://pitchfork.com/staff/evan-minsker/"
+      }, 
+      "datePublished": "2015-01-29", 
+      "reviewRating": {
+        "@type": [
+          "Rating"
+        ], 
+        "bestRating": 100, 
+        "ratingValue": 76.0, 
+        "worstRating": 0
+      }, 
+      "review_id": "aHR0cDovL3BpdGNoZm9yay5jb20vcmV2aWV3cy9hbGJ1bXMvMjAxNzEtYmFjay1mcm9tLXRoZS1ncmF2ZS12b2wtOS1hbmQtMTAv", 
+      "url": "http://pitchfork.com/reviews/albums/20171-back-from-the-grave-vol-9-and-10/"
+    }, 
+    {
+      "@type": [
+        "Review", 
+        "User/Queue/Item"
+      ], 
+      "about": {
+        "@type": [
+          "MusicAlbum"
+        ], 
+        "byArtist": {
+          "@type": [
+            "MusicGroup"
+          ], 
+          "name": "Xibalba"
+        }, 
+        "name": "Tierra Y Libertad"
+      }, 
+      "author": {
+        "@type": [
+          "Person"
+        ], 
+        "name": "Andy O'Connor", 
+        "url": "http://pitchfork.com/staff/andy-oconnor/"
+      }, 
+      "datePublished": "2015-01-29", 
+      "reviewRating": {
+        "@type": [
+          "Rating"
+        ], 
+        "bestRating": 100, 
+        "ratingValue": 76.0, 
+        "worstRating": 0
+      }, 
+      "review_id": "aHR0cDovL3BpdGNoZm9yay5jb20vcmV2aWV3cy9hbGJ1bXMvMjAxMjYtdGllcnJhLXktbGliZXJ0YWQv", 
+      "url": "http://pitchfork.com/reviews/albums/20126-tierra-y-libertad/"
+    }, 
+    {
+      "@type": [
+        "Review", 
+        "User/Queue/Item"
+      ], 
+      "about": {
+        "@type": [
+          "MusicAlbum"
+        ], 
+        "byArtist": {
+          "@type": [
+            "MusicGroup"
+          ], 
+          "name": "Arthur"
+        }, 
+        "name": "Dreams and Images"
+      }, 
+      "author": {
+        "@type": [
+          "Person"
+        ], 
+        "name": "Stephen M. Deusner", 
+        "url": "http://pitchfork.com/staff/stephen-m-deusner/"
+      }, 
+      "datePublished": "2015-01-14", 
+      "reviewRating": {
+        "@type": [
+          "Rating"
+        ], 
+        "bestRating": 100, 
+        "ratingValue": 75.0, 
+        "worstRating": 0
+      }, 
+      "review_id": "aHR0cDovL3BpdGNoZm9yay5jb20vcmV2aWV3cy9hbGJ1bXMvMjAxMTItZHJlYW1zLWFuZC1pbWFnZXMv", 
+      "url": "http://pitchfork.com/reviews/albums/20112-dreams-and-images/"
+    }, 
+    {
+      "@type": [
+        "Review", 
+        "User/Queue/Item"
+      ], 
+      "about": {
+        "@type": [
+          "MusicAlbum"
+        ], 
+        "byArtist": {
+          "@type": [
+            "MusicGroup"
+          ], 
+          "name": "Atelje"
+        }, 
+        "name": "Meditation"
+      }, 
+      "author": {
+        "@type": [
+          "Person"
+        ], 
+        "name": "Marc Hogan", 
+        "url": "http://pitchfork.com/staff/marc-hogan/"
+      }, 
+      "datePublished": "2015-01-14", 
+      "reviewRating": {
+        "@type": [
+          "Rating"
+        ], 
+        "bestRating": 100, 
+        "ratingValue": 75.0, 
+        "worstRating": 0
+      }, 
+      "review_id": "aHR0cDovL3BpdGNoZm9yay5jb20vcmV2aWV3cy9hbGJ1bXMvMjAxMDctbWVkaXRhdGlvbi8=", 
+      "url": "http://pitchfork.com/reviews/albums/20107-meditation/"
+    }, 
+    {
+      "@type": [
+        "Review", 
+        "User/Queue/Item"
+      ], 
+      "about": {
+        "@type": [
+          "MusicAlbum"
+        ], 
+        "byArtist": {
+          "@type": [
+            "MusicGroup"
+          ], 
+          "name": "Brian Chippendale"
+        }, 
+        "name": "Brian Chippendale & Greg Saunier"
+      }, 
+      "author": {
+        "@type": [
+          "Person"
+        ], 
+        "name": "Marc Masters", 
+        "url": "http://pitchfork.com/staff/marc-masters/"
+      }, 
+      "datePublished": "2015-01-12", 
+      "reviewRating": {
+        "@type": [
+          "Rating"
+        ], 
+        "bestRating": 100, 
+        "ratingValue": 75.0, 
+        "worstRating": 0
+      }, 
+      "review_id": "aHR0cDovL3BpdGNoZm9yay5jb20vcmV2aWV3cy9hbGJ1bXMvMjAwNDctYnJpYW4tY2hpcHBlbmRhbGUtZ3JlZy1zYXVuaWVyLw==", 
+      "url": "http://pitchfork.com/reviews/albums/20047-brian-chippendale-greg-saunier/"
+    }, 
+    {
+      "@type": [
+        "Review", 
+        "User/Queue/Item"
+      ], 
+      "about": {
+        "@type": [
+          "MusicAlbum"
+        ], 
+        "byArtist": {
+          "@type": [
+            "MusicGroup"
+          ], 
+          "name": "Jordan De La Sierra"
+        }, 
+        "name": "Gymnosphere: Song of the Rose"
+      }, 
+      "author": {
+        "@type": [
+          "Person"
+        ], 
+        "name": "Jayson Greene", 
+        "url": "http://pitchfork.com/staff/jayson-greene/"
+      }, 
+      "datePublished": "2014-12-09", 
+      "reviewRating": {
+        "@type": [
+          "Rating"
+        ], 
+        "bestRating": 100, 
+        "ratingValue": 75.0, 
+        "worstRating": 0
+      }, 
+      "review_id": "aHR0cDovL3BpdGNoZm9yay5jb20vcmV2aWV3cy9hbGJ1bXMvMTk5OTQtZ3ltbm9zcGhlcmUtc29uZy1vZi10aGUtcm9zZS8=", 
+      "url": "http://pitchfork.com/reviews/albums/19994-gymnosphere-song-of-the-rose/"
+    }, 
+    {
+      "@type": [
+        "Review", 
+        "User/Queue/Item"
+      ], 
+      "about": {
+        "@type": [
+          "MusicAlbum"
+        ], 
+        "byArtist": {
+          "@type": [
+            "MusicGroup"
+          ], 
+          "name": "Mourn"
+        }, 
+        "name": "Mourn"
+      }, 
+      "author": {
+        "@type": [
+          "Person"
+        ], 
+        "name": "Stuart Berman", 
+        "url": "http://pitchfork.com/staff/stuart-berman/"
+      }, 
+      "datePublished": "2015-02-12", 
+      "reviewRating": {
+        "@type": [
+          "Rating"
+        ], 
+        "bestRating": 100, 
+        "ratingValue": 75.0, 
+        "worstRating": 0
+      }, 
+      "review_id": "aHR0cDovL3BpdGNoZm9yay5jb20vcmV2aWV3cy9hbGJ1bXMvMjAxMjItbW91cm4v", 
+      "url": "http://pitchfork.com/reviews/albums/20122-mourn/"
+    }, 
+    {
+      "@type": [
+        "Review", 
+        "User/Queue/Item"
+      ], 
+      "about": {
+        "@type": [
+          "MusicAlbum"
+        ], 
+        "byArtist": {
+          "@type": [
+            "MusicGroup"
+          ], 
+          "name": "Shy Glizzy"
+        }, 
+        "name": "Law 3: Now or Never"
+      }, 
+      "author": {
+        "@type": [
+          "Person"
+        ], 
+        "name": "David Turner", 
+        "url": "http://pitchfork.com/staff/david-turner/"
+      }, 
+      "datePublished": "2014-12-11", 
+      "reviewRating": {
+        "@type": [
+          "Rating"
+        ], 
+        "bestRating": 100, 
+        "ratingValue": 75.0, 
+        "worstRating": 0
+      }, 
+      "review_id": "aHR0cDovL3BpdGNoZm9yay5jb20vcmV2aWV3cy9hbGJ1bXMvMjAwNjItbGF3LTMtbm93LW9yLW5ldmVyLw==", 
+      "url": "http://pitchfork.com/reviews/albums/20062-law-3-now-or-never/"
+    }, 
+    {
+      "@type": [
+        "Review", 
+        "User/Queue/Item"
+      ], 
+      "about": {
+        "@type": [
+          "MusicAlbum"
+        ], 
+        "byArtist": {
+          "@type": [
+            "MusicGroup"
+          ], 
+          "name": "Silk Rhodes"
+        }, 
+        "name": "Silk Rhodes"
+      }, 
+      "author": {
+        "@type": [
+          "Person"
+        ], 
+        "name": "Colin Joyce", 
+        "url": "http://pitchfork.com/staff/colin-joyce/"
+      }, 
+      "datePublished": "2014-12-04", 
+      "reviewRating": {
+        "@type": [
+          "Rating"
+        ], 
+        "bestRating": 100, 
+        "ratingValue": 75.0, 
+        "worstRating": 0
+      }, 
+      "review_id": "aHR0cDovL3BpdGNoZm9yay5jb20vcmV2aWV3cy9hbGJ1bXMvMTk5ODctc2lsay1yaG9kZXMtc2lsay1yaG9kZXMv", 
+      "url": "http://pitchfork.com/reviews/albums/19987-silk-rhodes-silk-rhodes/"
+    }, 
+    {
+      "@type": [
+        "Review", 
+        "User/Queue/Item"
+      ], 
+      "about": {
+        "@type": [
+          "MusicAlbum"
+        ], 
+        "byArtist": {
+          "@type": [
+            "MusicGroup"
+          ], 
+          "name": "Sir Richard Bishop"
+        }, 
+        "name": "Tangier Sessions"
+      }, 
+      "author": {
+        "@type": [
+          "Person"
+        ], 
+        "name": "Winston Cook-Wilson", 
+        "url": "http://pitchfork.com/staff/winston-cook-wilson/"
+      }, 
+      "datePublished": "2015-02-13", 
+      "reviewRating": {
+        "@type": [
+          "Rating"
+        ], 
+        "bestRating": 100, 
+        "ratingValue": 75.0, 
+        "worstRating": 0
+      }, 
+      "review_id": "aHR0cDovL3BpdGNoZm9yay5jb20vcmV2aWV3cy9hbGJ1bXMvMjAxMjMtdGFuZ2llci1zZXNzaW9ucy8=", 
+      "url": "http://pitchfork.com/reviews/albums/20123-tangier-sessions/"
+    }, 
+    {
+      "@type": [
+        "Review", 
+        "User/Queue/Item"
+      ], 
+      "about": {
+        "@type": [
+          "MusicAlbum"
+        ], 
+        "byArtist": {
+          "@type": [
+            "MusicGroup"
+          ], 
+          "name": "Twerps"
+        }, 
+        "name": "Range Anxiety"
+      }, 
+      "author": {
+        "@type": [
+          "Person"
+        ], 
+        "name": "Ian Cohen", 
+        "url": "http://pitchfork.com/staff/ian-cohen/"
+      }, 
+      "datePublished": "2015-01-28", 
+      "reviewRating": {
+        "@type": [
+          "Rating"
+        ], 
+        "bestRating": 100, 
+        "ratingValue": 75.0, 
+        "worstRating": 0
+      }, 
+      "review_id": "aHR0cDovL3BpdGNoZm9yay5jb20vcmV2aWV3cy9hbGJ1bXMvMjAxNDAtcmFuZ2UtYW54aWV0eS8=", 
+      "url": "http://pitchfork.com/reviews/albums/20140-range-anxiety/"
+    }
+  ], 
+  "queueForm": {
+    "@type": "IriTemplate", 
+    "mapping": [
+      {
+        "comment": "Restrict queue to items with a pub_date >= given pub_date", 
+        "property": "pub_date", 
+        "required": false, 
+        "variable": "pub_date_gte"
+      }, 
+      {
+        "comment": "Restrict queue to items with a rating >= given normalizedScore", 
+        "property": "normalizedScore", 
+        "required": false, 
+        "variable": "score_gte"
+      }
+    ], 
+    "template": "/mock_service/queue.json{?pub_date_gte,score_gte}"
+  }, 
+  "user": {
+    "@id": "/mock_service/user.json",
+    "@type": [
+      "User"
+    ], 
+    "queue": "/mock_service/queue.json",
+    "seen": "/mock_service/seen.json"
+  }
+}

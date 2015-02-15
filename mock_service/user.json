@@ -1,0 +1,50 @@
+{
+  "@context": {
+    "Collection": "hydra:Collection", 
+    "MusicAlbum": "schema:MusicAlbum", 
+    "MusicGroup": "schema:MusicGroup", 
+    "Person": "schema:Person", 
+    "Rating": "schema:Rating", 
+    "Review": "schema:Review", 
+    "ReviewList": "vocab:ReviewList", 
+    "User": "vocab:User", 
+    "User/Queue": "vocab:User/Queue", 
+    "User/Queue/Item": "vocab:User/Queue/Item", 
+    "User/Seen": "vocab:User/Seen", 
+    "User/Seen/Item": "vocab:User/Seen/Item", 
+    "about": "schema:about", 
+    "author": "schema:author", 
+    "bestRating": "schema:bestRating", 
+    "datePublished": {
+      "@id": "schema:datePublished", 
+      "@type": "xsd:date"
+    }, 
+    "hydra": "http://www.w3.org/ns/hydra/core#", 
+    "loginForm": "vocab:loginForm", 
+    "member": "hydra:member", 
+    "name": "schema:name", 
+    "queue": {
+      "@id": "vocab:queue", 
+      "@type": "@id"
+    }, 
+    "ratingValue": "schema:ratingValue", 
+    "reviewRating": "schema:reviewRating", 
+    "review_id": "vocab:review_id", 
+    "schema": "http://schema.org/", 
+    "seen": {
+      "@id": "vocab:seen", 
+      "@type": "@id"
+    }, 
+    "url": "schema:url", 
+    "user": "vocab:user", 
+    "vocab": "http://localhost:5000/vocab#", 
+    "worstRating": "schema:worstRating", 
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  }, 
+  "@id": "/mock_service/user.json", 
+  "@type": [
+    "User"
+  ], 
+  "queue": "/mock_service/queue.json", 
+  "seen": "./mock_service/seen.json"
+}

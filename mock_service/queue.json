@@ -37,7 +37,7 @@
     }, 
     "url": "schema:url", 
     "user": "vocab:user", 
-    "vocab": "http://localhost:5000/vocab#", 
+    "vocab": "http://rdf.vocab-ld.org/vocabs/music-reviews.jsonld#",
     "worstRating": "schema:worstRating", 
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   }, 

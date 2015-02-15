@@ -1,0 +1,17 @@
+{
+    "name": "music-reviews-html5-client",
+    "browserify": {
+	"transform": [
+	    ["6to5ify"]
+	]
+    },
+    "dependencies": {
+	"browserify": "latest",
+	"watchify": "latest",
+	"reactify": "1.0.0",
+	"react": "0.12.1",
+	"6to5": "latest",
+	"6to5ify": "latest",
+	"uri-template-lite": "0.1.11"
+    }
+}

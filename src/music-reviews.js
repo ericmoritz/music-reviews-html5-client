@@ -1,24 +1,23 @@
+require("6to5/polyfill");
+var URI = require("uri-template-lite").URI;
+var React = require("react");
+
 function iriTemplateRender(iriTemplate, variables) {
     var template = iriTemplate['hydra:template'];
     var bindings = {}
-    function findMapping(property) {
-	for(i in iriTemplate['hydra:mapping']) {
-	    var mapping = iriTemplate['hydra:mapping'][i];
-	    if(mapping['hydra:property'] == property) {
-		return mapping;
-	    }
-	}
-    }
     for(var prop in variables) {
-	var mapping = findMapping(prop);
+	var mapping = iriTemplate['hydra:mapping'].find(
+	    mapping => mapping['hydra:property'] == prop
+	)
 	if(mapping) {
 	    bindings[mapping['hydra:variable']] = variables[prop]
 	}
     }
-    return (new URITemplate(template).expand(bindings))
+    return URI.expand(template, bindings)
 }
+
 var UserMenu = React.createClass({
-    render: function() {
+    render() {
 	var queueUrl = "#" + this.props.data.queue;
 	var seenUrl = "#" + this.props.data.seen;
 	return (
@@ -31,7 +30,7 @@ var UserMenu = React.createClass({
 })
 
 var Review = React.createClass({
-    render: function() {
+    render() {
 	return (
 	    <span>
 		<span className="rating">{this.props.data.reviewRating.ratingValue}</span>
@@ -44,14 +43,12 @@ var Review = React.createClass({
 })
 
 var ReviewList = React.createClass({
-    render: function() {
+    render() {
 	var members = this.props.data.member;
 
 	if(members.length) {
 	    var items = members.map(
-		function(x) {
-		    return <li><Review data={x} /></li>;
-		}
+		x => <li><Review data={x} /></li>
 	    )
 	    return <ul>{items}</ul>
 	} else {
@@ -61,13 +58,13 @@ var ReviewList = React.createClass({
 })
 
 var LoginForm = React.createClass({
-    handleSubmit: function(e) {
+    handleSubmit(e) {
 	e.preventDefault();
 	var userUri = this.refs.userUri.getDOMNode().value.trim();
-	url = iriTemplateRender(this.props.data, {'@id': userUri});
+	var url = iriTemplateRender(this.props.data, {'@id': userUri});
 	window.location.hash = "#" + url;
     },
-    render: function() {
+    render() {
 	return (
 	    <form className="LoginForm" onSubmit={this.handleSubmit}>
 		Login: <input type="text" placeholder="user uri here" ref="userUri" />
@@ -78,39 +75,35 @@ var LoginForm = React.createClass({
 });
 
 var MusicReviewApp = React.createClass({
-    getInitialState: function() {
+    getInitialState() {
 	return {data: {}}
     },
-    navigate: function(url) {
+    navigate(url) {
 	$.ajax({
 	    url: url,
 	    dataType: 'json',
-	    success: function(data) {
-		this.setState({data:data})
-	    }.bind(this),
-	    error: function(xhr, status, err) {
-		console.error(url, status, err.toString());
-	    }.bind(this)
+	    success: data => this.setState({data:data}),
+	    error: (xhr, status, err) => console.error(url, status, err.toString()) 
 	})
     },
-    serverUrl: function() {
+    serverUrl() {
 	if(window.location.hash) {
-	        return window.location.hash.substring(1, window.location.hash.length)
-	    }
+	    return window.location.hash.substring(1, window.location.hash.length)
+	}
     },
-    navigateToHash: function() {
+    navigateToHash() {
 	var serverUrl = this.serverUrl()
 	if(serverUrl) {
-	        this.navigate(serverUrl);
-	    }
+	    this.navigate(serverUrl);
+	}
     },
-    componentDidMount: function() {
+    componentDidMount() {
 	this.navigateToHash();
 	$(window).on("hashchange", this.navigateToHash.bind(this))
     },
-    render: function() {
+    render() {
 	function hasType(object, type) {
-	    return _.find(object['@type'], function(x) { return x == type })
+	    return object['@type'] && object['@type'].find(x => x == type)
 	}
 	var nodes = [];
 	var loginForm, userMenu, userObj, reviewList;
@@ -146,3 +139,7 @@ var MusicReviewApp = React.createClass({
 		</div>)
     }
 });
+
+// Export these as globals
+window.React = React;
+window.MusicReviewApp = MusicReviewApp;

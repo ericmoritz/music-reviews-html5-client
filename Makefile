@@ -10,4 +10,5 @@ watch:
 	node_modules/.bin/watchify src/music-reviews.js -o build/music-reviews.js
 
 demo:
-	python -m SimpleHTTPServer
+	node_modules/.bin/beefy --index=index.html src/music-reviews.js
+

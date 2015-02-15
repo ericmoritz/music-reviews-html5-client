@@ -10,6 +10,7 @@
   "dependencies": {
     "6to5": "latest",
     "6to5ify": "latest",
+    "beefy": "^2.1.3",
     "bootstrap": "^3.3.2",
     "browserify": "latest",
     "jquery": "^2.1.3",

@@ -1,6 +1,7 @@
 {
-  "@context": {
+"@context": {
     "Collection": "hydra:Collection", 
+    "IriTemplate": "hydra:IriTemplate", 
     "MusicAlbum": "schema:MusicAlbum", 
     "MusicGroup": "schema:MusicGroup", 
     "Person": "schema:Person", 
@@ -15,19 +16,25 @@
     "about": "schema:about", 
     "author": "schema:author", 
     "bestRating": "schema:bestRating", 
+    "byArtist": "schema:byArtist", 
+    "comment": "rdfs:comment", 
     "datePublished": {
       "@id": "schema:datePublished", 
       "@type": "xsd:date"
     }, 
     "hydra": "http://www.w3.org/ns/hydra/core#", 
     "loginForm": "vocab:loginForm", 
+    "mapping": "hydra:mapping", 
     "member": "hydra:member", 
     "name": "schema:name", 
+    "property": "hydra:property", 
     "queue": {
       "@id": "vocab:queue", 
       "@type": "@id"
     }, 
+    "queueForm": "vocab:queueForm", 
     "ratingValue": "schema:ratingValue", 
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#", 
     "reviewRating": "schema:reviewRating", 
     "review_id": "vocab:review_id", 
     "schema": "http://schema.org/", 
@@ -35,12 +42,14 @@
       "@id": "vocab:seen", 
       "@type": "@id"
     }, 
+    "template": "hydra:template", 
     "url": "schema:url", 
     "user": "vocab:user", 
-    "vocab": "http://rdf.vocab-ld.org/vocabs/music-reviews.jsonld#",
+    "variable": "hydra:variable", 
+    "vocab": "http://rdf.vocab-ld.org/vocabs/music-reviews.jsonld#", 
     "worstRating": "schema:worstRating", 
     "xsd": "http://www.w3.org/2001/XMLSchema#"
-  }, 
+  },
   "@id": "/mock_service/seen.json", 
   "@type": [
     "Collection", 

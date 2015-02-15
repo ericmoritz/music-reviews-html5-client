@@ -12,7 +12,7 @@ make all
 make demo
 ```
 
-This will start an HTTP server here: http://localhost:8000/#mock_service/index.json (Assuming you have Python)
+This will start an HTTP server here: http://127.0.0.1:9966/#mock_service/index.json
 
 If you navigate to that URL you can use the service.
 

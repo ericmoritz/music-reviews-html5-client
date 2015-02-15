@@ -238,7 +238,6 @@ var MusicReviewApp = React.createClass({
 	function hasType(object, type) {
 	    return object['@type'] && ensureArray(object['@type']).find(x => x == type)
 	}
-	var nodes = [];
 	var content, loginForm, userMenu, userObj, reviewList, loading;
 
 	if(this.state.loading) {

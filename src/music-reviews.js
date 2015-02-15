@@ -1,6 +1,7 @@
 require("6to5/polyfill");
 var URI = require("uri-template-lite").URI;
 var React = require("react");
+var $ = require("jquery");
 
 function iriTemplateRender(iriTemplate, variables) {
     var template = iriTemplate['hydra:template'];

@@ -48,7 +48,8 @@
     "variable": "hydra:variable", 
     "vocab": "http://rdf.vocab-ld.org/vocabs/music-reviews.jsonld#", 
     "worstRating": "schema:worstRating", 
-    "xsd": "http://www.w3.org/2001/XMLSchema#"
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "datePublished": "schema:datePublished"
   },
   "@id": "/mock_service/queue.json", 
   "@type": [
@@ -1539,7 +1540,7 @@
     "mapping": [
       {
         "comment": "Restrict queue to items with a pub_date >= given pub_date", 
-        "property": "pub_date", 
+        "property": "datePublished", 
         "required": false, 
         "variable": "pub_date_gte"
       }, 

@@ -1,9 +1,11 @@
 require("6to5/polyfill");
+
 var URI = require("uri-template-lite").URI;
 var React = require("react");
 var $ = require("jquery");
 var bs = require('react-bootstrap');
 var jsonld = require('jsonld');
+
 
 function ensureArray(x) {
     if(x.find) {
@@ -29,8 +31,10 @@ function iriTemplateRender(iriTemplate, variables) {
 
 var UserMenu = React.createClass({
     render() {
-	var queueUrl = "#" + this.props.data.queue;
-	var seenUrl = "#" + this.props.data.seen;
+	var {props: {data: {queue: serviceQueueUrl, seen: serviceSeenUrl}}} = this;
+	var queueUrl = "#" + serviceQueueUrl;
+	var seenUrl = "#" + serviceSeenUrl;
+
 	return (
 	    <bs.Navbar>
               <bs.Nav>
@@ -44,11 +48,26 @@ var UserMenu = React.createClass({
 
 var Review = React.createClass({
     render() {
+	var {
+	    props: {
+		data: {
+		    reviewRating: {ratingValue: ratingValue},
+		    url: url,
+		    about: {
+			name: title,
+			byArtist: {
+			    name: artist
+			}
+		    }
+		}
+	    }
+	} = this;
+			   
 	return (
 	    <span>
-		<bs.Badge>{this.props.data.reviewRating.ratingValue}</bs.Badge><span> </span>
-		<a href={this.props.data.url}>{this.props.data.about.name}</a>
-		<span> by {this.props.data.about.byArtist.name}</span>
+		<bs.Badge>{ratingValue}</bs.Badge><span> </span>
+		<a href={url}>{title}</a>
+		<span> by {artist}</span>
             </span>
 	)
     }
@@ -231,17 +250,16 @@ var MusicReviewApp = React.createClass({
 	} else if(this.state.data.user) {
 	    userObj = this.state.data.user;
 	}
-	
+	if(userObj) {
+	    userMenu = <UserMenu data={userObj} />
+	}
+
 	if(this.state.data.loginForm) {
 	    loginForm = <LoginForm data={this.state.data.loginForm} />
 	}
 	
 	if(hasType(this.state.data, 'ReviewList')) {
 	    reviewList = <ReviewList data={this.state.data} />
-	}
-	
-	if(userObj) {
-	    userMenu = <UserMenu data={userObj} />
 	}
 
 	return (<bs.Panel bsStyle="primary">
@@ -260,3 +278,7 @@ var MusicReviewApp = React.createClass({
 // Export these as globals
 window.React = React;
 window.MusicReviewApp = MusicReviewApp;
+React.render(
+    React.createElement(MusicReviewApp, null),
+    document.body
+);

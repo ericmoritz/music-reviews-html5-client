@@ -1539,14 +1539,14 @@
     "@type": "IriTemplate", 
     "mapping": [
       {
-        "comment": "Restrict queue to items with a pub_date >= given pub_date", 
+        "comment": "Restrict queue to items with a pub_date >= given datePublished", 
         "property": "datePublished", 
         "required": false, 
         "variable": "pub_date_gte"
       }, 
       {
-        "comment": "Restrict queue to items with a rating >= given normalizedScore", 
-        "property": "normalizedScore", 
+        "comment": "Restrict queue to items with a rating >= given ratingValue", 
+        "property": "ratingValue", 
         "required": false, 
         "variable": "score_gte"
       }

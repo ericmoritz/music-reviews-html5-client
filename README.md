@@ -7,7 +7,7 @@ It is written using [React](http://facebook.github.io/react/).
 In good hypermedia fashion, there is a mock service that can be navigated to. Just run the following:
 
 ```
-npm install -g react-tools
+npm install
 make all
 make demo
 ```

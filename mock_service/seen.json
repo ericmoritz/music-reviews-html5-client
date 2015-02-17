@@ -1,6 +1,8 @@
 {
-"@context": {
+  "@context": {
     "Collection": "hydra:Collection", 
+    "CreateResourceOperation": "hydra:CreateResourceOperation", 
+    "DeleteResourceOperation": "hydra:DeleteResourceOperation", 
     "IriTemplate": "hydra:IriTemplate", 
     "MusicAlbum": "schema:MusicAlbum", 
     "MusicGroup": "schema:MusicGroup", 
@@ -26,7 +28,9 @@
     "loginForm": "vocab:loginForm", 
     "mapping": "hydra:mapping", 
     "member": "hydra:member", 
+    "method": "hydra:method", 
     "name": "schema:name", 
+    "operation": "hydra:operation", 
     "property": "hydra:property", 
     "queue": {
       "@id": "vocab:queue", 
@@ -49,16 +53,39 @@
     "vocab": "http://rdf.vocab-ld.org/vocabs/music-reviews.jsonld#", 
     "worstRating": "schema:worstRating", 
     "xsd": "http://www.w3.org/2001/XMLSchema#"
-  },
-  "@id": "/mock_service/seen.json", 
+  }, 
+  "@id": "/mock_service/seen.json",
   "@type": [
     "Collection", 
     "ReviewList", 
     "User/Seen"
   ], 
   "member": [], 
+  "seenItem": {
+    "@type": "IriTemplate", 
+    "mapping": [
+      {
+        "property": "review_id", 
+        "required": true, 
+        "variable": "review_id"
+      }
+    ], 
+    "operation": [
+      {
+        "@type": "DeleteResourceOperation", 
+        "comment": "If you delete a review into a user's seen collection, it adds it to their queue", 
+        "method": "DELETE"
+      }, 
+      {
+        "@type": "CreateResourceOperation", 
+        "comment": "If you put a review into a user's seen collection, it removes it from their queue", 
+        "method": "PUT"
+      }
+    ], 
+    "template": "/mock_service/seen/{review_id}"
+  }, 
   "user": {
-    "@id": "/mock_service/user.json", 
+    "@id": "/mock_service/user.json",
     "@type": [
       "User"
     ], 

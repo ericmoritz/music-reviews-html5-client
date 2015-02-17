@@ -55,5 +55,5 @@
     "User"
   ], 
   "queue": "/mock_service/queue.json", 
-  "seen": "./mock_service/seen.json"
+  "seen": "/mock_service/seen.json"
 }

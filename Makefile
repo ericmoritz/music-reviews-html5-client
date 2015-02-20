@@ -1,9 +1,15 @@
-all: build/music-reviews.js build/music-reviews.css
+all: node_modules js/bundle.js css/bundle.css
 
-build/music-reviews.js:
+clean:
+	rm -rf {node_modules,*/bundle.*}
+
+node_modules:
+	npm install
+
+js/bundle.js:
 	node_modules/.bin/browserify js/app.js -o js/bundle.js
 
-build/music-reviews.css:
+css/bundle.css:
 	./node_modules/.bin/lessc css/style.less css/bundle.css
 
 demo:

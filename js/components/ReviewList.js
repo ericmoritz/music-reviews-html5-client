@@ -1,5 +1,3 @@
-require("6to5/polyfill");
-
 var React = require("react");
 var bs = require('react-bootstrap');
 var MusicAppApi = require("../utils/MusicAppApi");
@@ -51,17 +49,16 @@ var Review = React.createClass({
 		}
 	    } = this.props.data;
 
-	    var seenButton = (<bs.Button onClick={this._onSeenButton}>
+	    var seenButton = (<bs.Button bsStyle="primary" onClick={this._onSeenButton}>
 			      {isSeen ? "Unsee" : "Seen"}
 			      </bs.Button>);
-
+	    var ratingValue = Math.round(ratingValue * 10) / 10;
 	    return (
-		    <span>
-		    <bs.Badge>{ratingValue}</bs.Badge><span> </span>
-		    <a href={url}>{title}</a>
-		    <span> by {artist}</span>
-		    {seenButton}
-		    </span>
+		    <bs.Row>
+		    <bs.Col md={1}><bs.Badge>{ratingValue}</bs.Badge></bs.Col>
+		    <bs.Col md={9}><a href={url}>{title}</a> by {artist}</bs.Col>
+		    <bs.Col md={2}>{seenButton}</bs.Col>
+		    </bs.Row>
 	    )
 	}
     }
@@ -71,8 +68,6 @@ var Review = React.createClass({
 var ReviewList = React.createClass({
     render() {
 	var {member, queueForm} = this.props.data;
-	member = !!member && member.map ? member : [];
-
 	var reviews = member.map(
 	    x => <bs.ListGroupItem key={x.review_id}><Review data={x} /></bs.ListGroupItem>
 	)

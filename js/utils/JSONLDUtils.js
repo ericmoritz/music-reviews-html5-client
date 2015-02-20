@@ -1,19 +1,16 @@
 var URI = require("uri-template-lite").URI
 
-function ensureArray(x) {
-    if(x.find) {
-	return x;
-    } else {
-	return [x]
-    }
-}
-
 module.exports = {
+    ensureArray(x) {
+	if(!x) return [];
+	if(x.map) return x;
+	else return [x];
+    },
     iriTemplateRender(iriTemplate, variables) {
 	var template = iriTemplate['template'];
 	var bindings = {}
 	for(var prop in variables) {
-	    var mapping = ensureArray(iriTemplate['mapping']).find(
+	    var mapping = this.ensureArray(iriTemplate['mapping']).find(
 		mapping => mapping['property'] == prop
 	    )
 	    if(mapping) {
@@ -23,6 +20,6 @@ module.exports = {
 	return URI.expand(template, bindings)
     },
     hasType(object, type) {
-	return object['@type'] && ensureArray(object['@type']).find(x => x == type)
+	return object['@type'] && this.ensureArray(object['@type']).find(x => x == type)
     }
 }

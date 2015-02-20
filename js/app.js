@@ -1,4 +1,4 @@
-require("6to5/polyfill");
+require("babel/register");
 var MusicAppApi = require("./utils/MusicAppApi");
 var MusicReviewApp = require("./components/MusicReviewApp");
 var React = require("react");

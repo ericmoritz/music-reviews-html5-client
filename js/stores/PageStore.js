@@ -1,4 +1,3 @@
-require("6to5/polyfill");
 var MusicAppDispatcher = require("../dispatcher/MusicAppDispatcher");
 var MusicAppConstants = require("../constants/MusicAppConstants");
 var EventEmitter = require('events').EventEmitter;
@@ -28,7 +27,8 @@ function handleNewData(url, x) {
     var ret = {url};
 
     if(JSONLDUtils.hasType(x, "ReviewList") && x.member) {
-	ret.reviewList = x
+	ret.reviewList = x;
+	ret.reviewList.member = JSONLDUtils.ensureArray(ret.reviewList.member);
     }
 
     if(JSONLDUtils.hasType(x, "User")) {

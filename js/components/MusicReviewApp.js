@@ -1,4 +1,3 @@
-require("6to5/polyfill");
 var React = require("react");
 var bs = require('react-bootstrap');
 var PageStore = require("../stores/PageStore");
